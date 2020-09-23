@@ -16,3 +16,6 @@ CREATE TABLE persoon(
     FOREIGN KEY (accountid) REFERENCES account(id),
     UNIQUE(username)
 );
+
+CREATE USER 'dbconnection'@'127.0.0.1' IDENTIFIED BY 'DbConnection!';
+GRANT ALL PRIVILEGES ON *.* TO 'dbconnection'@'127.0.0.1';
